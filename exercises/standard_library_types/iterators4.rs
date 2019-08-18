@@ -10,6 +10,7 @@ pub fn factorial(num: u64) -> u64 {
     // For the most fun don't use:
     // - recursion
     // Scroll down for hints.
+    (1..=num).fold(1, |a, b| a * b)
 }
 
 #[cfg(test)]
