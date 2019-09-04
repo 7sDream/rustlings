@@ -190,7 +190,7 @@ impl error::Error for CreationError {
 
 
 // Another hint: under the hood, the `?` operator calls `From::from`
-// on the error value to convert it to a boxed trait object, a Box<error::Error>,
+// on the error value to convert it to a boxed trait object, a Box<dyn error::Error>,
 // which is polymorphic-- that means that lots of different kinds of errors
 // can be returned from the same function because all errors act the same
 // since they all implement the `error::Error` trait.
